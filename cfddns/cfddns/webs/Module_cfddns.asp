@@ -104,7 +104,7 @@ var dbus = {};
 var _responseLen;
 var noChange = 0;
 var x = 5;
-var params_inp = ['cfddns_email', 'cfddns_akey', 'cfddns_zid', 'cfddns_name', 'cfddns_domain', 'cfddns_ttl', 'cfddns_method'];
+var params_inp = ['cfddns_email', 'cfddns_akey', 'cfddns_zid', 'cfddns_interval', 'cfddns_name', 'cfddns_domain', 'cfddns_ttl', 'cfddns_method'];
 var params_chk = ['cfddns_enable', 'cfddns_proxied'];
 //var params_chk = ['cfddns_enable', 'cfddns_proxied', 'cfddns_ipv6'];
 
@@ -413,6 +413,13 @@ function reload_Soft_Center(){
 													</td>
 												</tr>
 												<tr>
+													<th>检测周期</th>
+													<td>
+														<input type="text" style="width: 2.5em" name="cfddns_interval" id="cfddns_interval" class="input_ss_table" autocomplete="off" autocorrect="off" autocapitalize="off" value="5" />
+														分钟
+													</td>
+												</tr>
+												<tr>
 													<th width="35%">域名(Domain Name)</th>
 													<td>
 														<input type="text" maxlength="64" id="cfddns_name" name="cfddns_name" class="input_ss_table" style="width:130px;" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="子域名" value="" />
@@ -441,7 +448,7 @@ function reload_Soft_Center(){
 												<tr>
 													<th title="可自行修改命令行，以获得正确的公网IP。如添加 '--interface vlan2' 以指定多播情况下的接口,可以空着">获得IP命令(get ip)[?]</th>
 													<td>
-														<input type="text" id="cfddns_method" name="cfddns_method" value="curl -s --interface ppp0 whatismyip.akamai.com" class="input_ss_table" style="width:98%;" autocomplete="off" autocorrect="off" autocapitalize="off" />
+														<input type="text" id="cfddns_method" name="cfddns_method" value="curl -s http://ipv4.icanhazip.com" class="input_ss_table" style="width:98%;" autocomplete="off" autocorrect="off" autocapitalize="off" />
 													</td>
 												</tr>
 											</table>
